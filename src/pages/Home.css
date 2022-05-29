@@ -1,0 +1,27 @@
+.noir {
+    background-color: rgb(58, 58, 58);
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fffa65;
+}
+
+.header {
+    padding: 15px;
+}
+
+.row {
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    justify-content: right;
+}
+
+.frapper {
+    text-align: right;
+}

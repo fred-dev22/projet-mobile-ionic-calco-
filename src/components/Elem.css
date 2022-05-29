@@ -1,0 +1,21 @@
+.speciale,
+.nonSpeciale {
+    margin: 1px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nonSpeciale {
+    color: rgb(255, 255, 255);
+}
+
+.nonSpeciale :focus {
+    background-color: red;
+}
+
+.speciale {
+    color: #fffa65;
+    font-weight: bold;
+}
