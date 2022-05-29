@@ -11,8 +11,8 @@
     color: rgb(255, 255, 255);
 }
 
-.nonSpeciale :focus {
-    background-color: red;
+.nonSpeciale :active {
+    color: red;
 }
 
 .speciale {

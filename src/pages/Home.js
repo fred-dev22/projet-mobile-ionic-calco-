@@ -12,19 +12,23 @@ const Home = () => {
   const [elementFraper, setElementFraper] = useState("");
   const [resultat, setResultat] = useState(0);
   const [aff, setAff] = useState('');
+  const [tmp, setTmp] = useState(1);
 
 
   const handleClick = (e, operateur) => {
+    setTmp(1);
     if ("0123456789".indexOf(operateur) != -1) {
       setAff(operateur);
-      console.log(aff);
     }
     if (operateur === "=") {
+      setTmp(2);
       total();
     } else if (operateur === "C") {
       reset()
     } else if (operateur === "del") {
       effacer()
+    } else if (operateur === "plus") {
+      //rien pas encore implementer
     }
     else if (operateur === "%") {
       pourcentage()
@@ -32,14 +36,21 @@ const Home = () => {
       let tmp = elementFraper.slice(0, elementFraper.length - 1);
       setElementFraper(tmp.concat(operateur));
 
+    } else if ("*/-+".indexOf(operateur) != -1) {
+      if (elementFraper.length > 0)
+        setElementFraper(elementFraper.concat(operateur));
+
     }
     else {
       setElementFraper(elementFraper.concat(operateur));
     }
+
+
   }
 
   const total = () => {
     setResultat(eval(elementFraper));
+
 
   }
   const reset = () => {
@@ -51,7 +62,8 @@ const Home = () => {
 
   }
   const pourcentage = () => {
-    setResultat(resultat / 100);
+    if (resultat > 0 || resultat < 0)
+      setResultat(resultat / 100);
   }
 
   useEffect(() => {
@@ -72,10 +84,10 @@ const Home = () => {
       </IonHeader>
       <IonRow className='noir row'>
         <IonText >
-          <div className='frapper'>
+          <div className={tmp == 1 ? "frapper" : "tapePas"}>
             {elementFraper}
           </div>
-          <div className='frapper'>
+          <div className={tmp == 2 ? "frapper" : "tapePas"}>
             {resultat}
           </div>
         </IonText>

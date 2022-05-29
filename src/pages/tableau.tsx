@@ -27,7 +27,7 @@ export const tableau = [
         { valeur: "+", speciale: true, },
     ],
     [
-        { valeur: "00", speciale: false },
+        { valeur: "plus", speciale: true },
         { valeur: "0", speciale: false },
         { valeur: ".", speciale: false },
         { valeur: "=", speciale: true },
