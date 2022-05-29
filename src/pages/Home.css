@@ -9,8 +9,16 @@
     color: #fffa65;
 }
 
+.titlePart {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fffa65;
+}
+
 .header {
     padding: 15px;
+    display: flex;
 }
 
 .row {
@@ -24,4 +32,24 @@
 
 .frapper {
     text-align: right;
+}
+
+.people {
+    color: #fffa65;
+    font-size: 300%;
+    padding-top: 200px;
+}
+
+.grid {
+    color: white;
+    font-weight: bold;
+}
+
+.first {
+    color: #fffa65;
+    font-size: 150%;
+}
+
+.bas {
+    border-bottom: 1px solid white;
 }
